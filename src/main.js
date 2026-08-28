@@ -1,14 +1,5 @@
-// scroll.js
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollContainer = document.querySelector(".scroll-container");
+import $ from "jquery";
 
-  // Scroll right
-  document.querySelector("#scrollRight").addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: 200, behavior: "smooth" });
-  });
-
-  // Scroll left
-  document.querySelector("#scrollLeft").addEventListener("click", () => {
-    scrollContainer.scrollBy({ left: -200, behavior: "smooth" });
-  });
+$(document).ready(function () {
+  console.log("jQuery is working inside Vite!");
 });
