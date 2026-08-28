@@ -19,13 +19,7 @@
     <div class="h-20 bg-white">
      
     <!-- navigation bar -->
-            <!-- <div class="flex-wrap flex justify-end items-end md:mx-32 lg:mx-32 mx-20 py-5 md:h-20 lg:h-20 h-2 bg-white">
-  <img 
-    src="./src/images/icons8-live.svg" 
-    class="md:visible lg:visible hidden md:block lg:block md:w-8 lg:w-8 md:h-8 lg:h-8 h-5 w-5 object-cover" 
-    alt="Live Icon" 
-  />
-</div>       -->
+          
     <nav class="bg-white fixed w-full z-20 top-0 inset-s-0 border-none border-default shadow-none"
     >
    
@@ -40,12 +34,17 @@
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
       
 
-          <button
-            type="button"
-            class="text-white bg-black font-serif capitalize box-border border-none font-medium leading-5 rounded-none text-lg md:px-5 lg:px-5 md:py-3 lg:py-3 py-5 px-5 focus:outline-none"
-          >
-            create account
-          </button>
+         <div class="flex flex-nowrap justify-center items-center gap-0 mx-3 md:mx-32 lg:mx-32">
+           <img 
+    src="./src/images/icons8-live.svg" 
+    class="md:visible lg:visible md:block lg:block md:w-auto lg:w-auto md:h-10 lg:h-10 h-5 mx-2 w-auto object-cover" 
+    alt="Live Icon" 
+  />
+  <span class="font-serif md:text-lg lg:text-xs text-xs font-semibold md:mr-20 lg:mr-20 uppercase text-red-500">
+live
+         </span>
+         </div>
+
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -74,7 +73,7 @@
             </li>
             <li>
               <a
-                href="#"
+                href="#news"
                 class="block capitalize py-2 px-3 text-heading rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent"
                 >news</a
               >
@@ -107,16 +106,18 @@
     <!-- contents -->
 
     <div
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 lg:gap-8 gap-10 bg-white md:mt-5 lg:mt-5 md:mx-20 lg:mx-20 pt-10 px-4 md:px-0"
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:gap-8 lg:gap-8 gap-10 bg-white md:mt-5 lg:mt-5 md:mx-20 lg:mx-20 pt-10 px-4 md:px-0" 
     >
       <!-- column 1 -->
       <div class="w-full flex flex-col lg:row-span-2 xl:row-span-1">
-        <h1
+        <a href="#" class="hover:underline">
+          <h1
           class="text-left font-semibold text-2xl mx-3 md:mx-0 lg:mx-0 font-serif capitalize"
         >
           former liberian president as suspect of a $317 million united states
           dollars drugs case
         </h1>
+        </a>
         <div class="flex flex-wrap justify-between gap-0 py-3">
           <div class="w-auto">
             <p class="font-serif text-lg mx-3 lowercase">
@@ -135,11 +136,13 @@
 
         <!-- sub column of column 1 -->
         <div class="flex flex-col">
-          <h1
+          <a href="#" class="hover:underline">
+            <h1
             class="text-left font-serif font-semibold text-2xl py-5 capitalize"
           >
             former liberian finance minister case is set to resumes
           </h1>
+          </a>
           <div class="bg-gray-500 mx-0 h-80">
             <img
               src="./src/images/Un-mandat-darret-a-ete-emis-contre-lancien-ministre-des-Finances-du-Liberia-350x250.jpg"
@@ -181,12 +184,14 @@
             class="w-full h-full object-cover cursor-pointer"
           />
         </div>
-        <h1
+        <a href="#" class="hover:underline">
+          <h1
           class="text-left font-semibold text-2xl py-8 mx-3 md:mx-0 lg:mx-0 font-serif capitalize"
         >
           former liberian president as suspect of a $317 million united states
           dollars drugs case
         </h1>
+        </a>
         <div
           class="flex flex-wrap justify-between gap-0 borde-r-none border-l-none border-t border-b h-10 bg-white"
         >
@@ -224,13 +229,29 @@
             class="w-full h-full object-cover"
           />
         </div>
-        <h1
+       <a href="#" class="hover:underline">
+ <h1
           class="text-left font-semibold text-2xl py-8 mx-3 md:mx-0 lg:mx-0 font-serif capitalize"
         >
           president joseph n boakai vowed to fight towards the minimizing of
           illicit drugs
         </h1>
 
+       </a>
+        <div
+          class="flex flex-wrap justify-between gap-0 borde-r-none border-l-none border-t-none border-b-none h-10 bg-white"
+        >
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 lowercase">
+              <!-- number of comments -->
+              <span class="font-serif">0</span>
+              <a href="#" class="underline">comments</a>
+            </p>
+          </div>
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 capitalize">agust 27, 2026</p>
+          </div>
+        </div>
         <div
           class="md:w-80 lg:w-80 md:h-32 lg:h-32 w-auto mx-2 bg-gray-900 h-64"
         >
@@ -242,21 +263,41 @@
           />
 
       </div>
-        <h1
+        <a href="#" class="hover:underline">
+          <h1
           class="text-left font-semibold text-2xl py-8 mx-3 md:mx-0 lg:mx-0 font-serif capitalize"
         >
           former liberian president as suspect of a $317 million united states
           dollars drugs case
         </h1>
+        </a>
+         <div
+          class="flex flex-wrap justify-between gap-0 borde-r-none border-l-none border-t-none border-b-none h-10 bg-white"
+        >
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 lowercase">
+              <!-- number of comments -->
+              <span class="font-serif">0</span>
+              <a href="#" class="underline">comments</a>
+            </p>
+          </div>
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 capitalize">agust 27, 2026</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <!-- more stories -->
 <!-- Section Header -->
-<div class="border-b border-t-0 border-l-0 border-r-0 md:w-80 lg:w-80 md:mx-20 lg:mx-20 mx-8 md:mt-10 lg:mt-10">
-  <h3 class="text-left font-serif text-xl font-semibold md:mx-0 lg:mx-0 mx-3 py-8 uppercase">
-    more news
+<div class="border-b border-t-0 border-l-0 border-r-0 md:w-auto lg:w-auto md:mx-20 lg:px-20 mx-8 md:mt-10 lg:mt-10" id="news">
+  <h3 class="text-left font-serif text-xl font-black md:mx-0 lg:mx-0 mx-3 py-8 uppercase">
+    more news <span class="md:text-4xl lg:text-4xl text-xl">&#62;</span>
   </h3>
+  <div class="flex flex-nowrap justify-end items-end gap-5 py-5">
+    <a href="#" class="font-serif text-lg">previous</a>
+    <a href="#" class="font-serif underline text-lg">next</a>
+  </div>
 </div>
 
 <!-- See More Link -->
@@ -265,23 +306,106 @@
 </div>
 
 <!-- Image Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 h-96 lg:grid-cols-3 gap-5 bg-white md:mx-20 lg:mx-20 mx-8 md:mb-10 lg:mb-10">
+<div class="grid grid-cols-1 md:grid-cols-3 h-96 lg:grid-cols-3 gap-50 md:gap-5 lg:gap-5 bg-white md:mx-20 lg:mx-20 mx-8 md:mb-10 lg:mb-10">
   <!-- 1 -->
-  <div class="w-80 h-48 bg-gray-900">
+   <div class="w-80 h-48 bg-white"> 
+    <div class="w-80 h-48 bg-gray-900">
     <img src="./src/images/Jewel-Howard-Taylor---drug-ring---20082026.avif" alt="" class="w-full h-full object-cover">
+
   </div>
 
+    <div class="h-20 bg-white">
+     <a href="#" class="hover:underline">
+       <h1
+          class="text-left font-semibold text-2xl py-8 mx-0 md:mx-0 lg:mx-0 font-serif capitalize"
+        >
+          president joseph n boakai vowed to fight towards the minimizing of
+          illicit drugs
+        </h1>
+     </a>
+     <div
+          class="flex flex-wrap justify-between gap-0 borde-r-none border-l-none border-t-none border-b-none h-10 bg-white"
+        >
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 lowercase">
+              <!-- number of comments -->
+              <span class="font-serif">0</span>
+              <a href="#" class="underline">comments</a>
+            </p>
+          </div>
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 capitalize">agust 27, 2026</p>
+          </div>
+        </div>
+    </div>
+   </div>
+  
   <!-- 2 -->
-  <div class="w-80 h-48 bg-gray-900">
+  
+   <div class="w-80 h-48 bg-white"> 
+    <div class="w-80 h-48 bg-gray-900">
     <img src="./src/images/Un-mandat-darret-a-ete-emis-contre-lancien-ministre-des-Finances-du-Liberia-350x250.jpg" alt="" class="w-full h-full object-cover">
-  </div>
+    </div>
+
+    <div class="h-20 bg-white">
+     <a href="#" class="hover:underline">
+       <h1
+          class="text-left font-semibold text-2xl py-8 mx-0 md:mx-0 lg:mx-0 font-serif capitalize"
+        >
+          president joseph n boakai vowed to fight towards the minimizing of
+          illicit drugs
+        </h1>
+     </a>
+     <div
+          class="flex flex-wrap justify-between gap-0 borde-r-none border-l-none border-t-none border-b-none h-10 bg-white"
+        >
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 lowercase">
+              <!-- number of comments -->
+              <span class="font-serif">0</span>
+              <a href="#" class="underline">comments</a>
+            </p>
+          </div>
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 capitalize">agust 27, 2026</p>
+          </div>
+        </div>
+    </div>
+   </div>
 
   <!-- 3 -->
-  <div class="w-80 h-48 bg-gray-900">
+
+  <div class="w-80 h-48 bg-white"> 
+    <div class="w-80 h-48 bg-gray-900">
     <img src="./src/images/Jewel-Howard-Taylor---drug-ring---20082026.avif" alt="" class="w-full h-full object-cover">
-  </div>
+    </div>
 
-
+    <div class="h-20 bg-white">
+      <a href="#" class="hover:underline">
+        <h1
+          class="text-left font-semibold text-2xl py-8 mx-0 md:mx-0 lg:mx-0 font-serif capitalize"
+        >
+          president joseph n boakai vowed to fight towards the minimizing of
+          illicit drugs
+        </h1>
+      </a>
+      <div
+          class="flex flex-wrap justify-between gap-0 borde-r-none border-l-none border-t-none border-b-none h-10 bg-white"
+        >
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 lowercase">
+              <!-- number of comments -->
+              <span class="font-serif">0</span>
+              <a href="#" class="underline">comments</a>
+            </p>
+          </div>
+          <div class="w-auto">
+            <p class="font-serif text-lg mx-3 capitalize">agust 27, 2026</p>
+          </div>
+        </div>
+    </div>
+   </div>
+   
     <script type="module" src="/src/main.js"></script>
     <!-- flowbite tailwindcss -->
     <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
