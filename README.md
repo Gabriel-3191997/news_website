@@ -12,7 +12,6 @@ Requirements
 ### Project Folder Structure
 
 ```
-NEWS_WEBSITE/
 ├── node_modules/
 ├── public/
 ├── server/
@@ -51,10 +50,10 @@ NEWS_WEBSITE/
 }
 ```
 
-`` npm install ```
+``npm install```
 
-``` npm run dev ``
+```npm run dev```
 
-paste below within your browser
+paste below within your browser to run locally
 
-```http://localhost:5173/``
+```http://localhost:5173/```
