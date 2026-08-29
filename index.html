@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
 
+
     <link rel="icon" type="image/svg+xml" href="/public/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Quality News Media</title>
@@ -31,6 +32,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', '%VITE_GA_MEASUREMENT_ID%');
 </script>
+<!-- Ads HypeLab -->
+ <script defer src="https://api.hypelab.com/v1/scripts/hp-sdk.js?v=0"></script>
+ <!-- Ads HypeLab -->
+ <script src="https://api.hypelab.com/v1/scripts/hp-sdk.js?v=0"></script>
+ <script>
+  // Use window.onload or direct initialization since the script is synchronous to guarantee HypeLab object availability
+  window.addEventListener("load", function () {
+    if (window.HypeLab) {
+      HypeLab.initialize({
+        environment: "production",
+        propertySlug: "demo_property",
+        /* Optionally disable wallet detection:
+        privacy: {
+          disableWalletDetection: true
+        }
+        */
+      });
+    }
+  });
+</script>
   </head>
   <body class="bg-white">
     <div class="h-20 bg-white">
@@ -39,6 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           
     <nav class="bg-white fixed w-full z-20 top-0 inset-s-0 border-none border-default shadow-none"
     >
+    <hype-banner placement="banner_placement"></hype-banner>
    
       <div class="max-w-7xl flex flex-wrap items-center md:justify-between lg:justify-between mx-auto p-4"
       >
