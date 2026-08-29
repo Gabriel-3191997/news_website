@@ -35,33 +35,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Ads HypeLab -->
  <script defer src="https://api.hypelab.com/v1/scripts/hp-sdk.js?v=0"></script>
  <!-- Ads HypeLab -->
- <script src="https://api.hypelab.com/v1/scripts/hp-sdk.js?v=0"></script>
- <script>
-  // Use window.onload or direct initialization since the script is synchronous to guarantee HypeLab object availability
-  window.addEventListener("load", function () {
-    if (window.HypeLab) {
-      HypeLab.initialize({
-        environment: "production",
-        propertySlug: "demo_property",
-        /* Optionally disable wallet detection:
-        privacy: {
-          disableWalletDetection: true
-        }
-        */
-      });
+ <script src="https://hypelab.com"></script>
+<script>
+  // Self-executing setup to catch late script execution loops
+  (function initHype() {
+    function start() {
+      if (window.HypeLab) {
+        window.HypeLab.initialize({
+          environment: "production",
+          propertySlug: "demo_property",
+          // Optionally disable wallet detection:
+          privacy: {
+            disableWalletDetection: true
+          }
+        });
+      }
     }
-  });
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      start();
+    } else {
+      window.addEventListener("DOMContentLoaded", start);
+    }
+  })();
 </script>
-  </head>
+ 
+</head>
   <body class="bg-white">
     <div class="h-20 bg-white">
-     
+
     <!-- navigation bar -->
           
     <nav class="bg-white fixed w-full z-20 top-0 inset-s-0 border-none border-default shadow-none"
     >
-    <hype-banner placement="banner_placement"></hype-banner>
-   
+    
       <div class="max-w-7xl flex flex-wrap items-center md:justify-between lg:justify-between mx-auto p-4"
       >
         <a href="index.html"
@@ -342,7 +348,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <!-- Image Grid -->
-<div class="grid grid-cols-1 md:grid-cols-3 h-96 lg:grid-cols-3 gap-50 md:gap-5 lg:gap-5 bg-white md:mx-20 lg:mx-20 mx-8 md:mb-10 lg:mb-10">
+<div class="grid grid-cols-1 md:grid-cols-3 md:h-96 lg:h-96 h-auto lg:grid-cols-3 gap-50 md:gap-5 lg:gap-5 bg-white md:mx-20 lg:mx-20 mx-8 md:mb-10 lg:mb-10">
   <!-- 1 -->
    <div class="w-80 h-48 bg-white"> 
     <div class="w-80 h-48 bg-gray-900">
@@ -411,7 +417,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- 3 -->
 
-  <div class="w-80 h-48 bg-white"> 
+  <div class="w-80 md:h-48 lg:h-48 h-auto bg-white"> 
     <div class="w-80 h-48 bg-gray-900">
     <img src="./src/images/Jewel-Howard-Taylor---drug-ring---20082026.avif" alt="" class="w-full h-full object-cover cursor-pointer hover:brightness-50">
     </div>
@@ -441,6 +447,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
     </div>
    </div>
+  </div>
+  <!-- advertisement -->
+   <div class="bg-white md:mt-32 lg:mt-32 mt-28 w-auto h-48 flex flex-wrap justify-center items-center mx-auto md:mt-32 lg:mt-32 mb-3 overflow-hidden">
+    <a id="native-ad-link-img" href="#" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center w-full h-full">
+      <img id="native-ad-image" src="" alt="Advertisement" class="max-w-full max-h-full object-contain hover:opacity-90 transition-opacity" />
+    </a>
+</div>
+
+   
 
     <!-- sticky right whatsapp icon -->
     <a
