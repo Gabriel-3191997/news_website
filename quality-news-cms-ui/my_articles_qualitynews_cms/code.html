@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QualityNews - My Articles</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#f5faff",
+                      "on-tertiary-container": "#4f8ad0",
+                      "surface": "#f5faff",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#d3e4ff",
+                      "on-tertiary": "#ffffff",
+                      "tertiary": "#000918",
+                      "outline": "#76777c",
+                      "surface-tint": "#585e6c",
+                      "on-background": "#171c20",
+                      "primary-container": "#1a202c",
+                      "tertiary-fixed-dim": "#a2c9ff",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#dee3e8",
+                      "surface-container-highest": "#dee3e8",
+                      "on-primary-fixed": "#161c27",
+                      "inverse-primary": "#c1c6d7",
+                      "tertiary-container": "#002140",
+                      "error": "#ba1a1a",
+                      "on-error-container": "#93000a",
+                      "primary-fixed-dim": "#c1c6d7",
+                      "surface-container": "#e9eef3",
+                      "on-error": "#ffffff",
+                      "on-secondary-fixed-variant": "#434749",
+                      "primary-fixed": "#dde2f3",
+                      "surface-dim": "#d5dbdf",
+                      "on-surface-variant": "#45474c",
+                      "on-tertiary-fixed": "#001c38",
+                      "inverse-surface": "#2c3135",
+                      "secondary-fixed": "#e0e3e5",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#e4e9ee",
+                      "surface-container-low": "#eff4f9",
+                      "secondary-fixed-dim": "#c3c7c9",
+                      "error-container": "#ffdad6",
+                      "on-primary-container": "#828796",
+                      "primary": "#030813",
+                      "inverse-on-surface": "#ecf1f6",
+                      "secondary": "#5b5f61",
+                      "on-primary-fixed-variant": "#414754",
+                      "on-tertiary-fixed-variant": "#004881",
+                      "secondary-container": "#dde0e2",
+                      "on-secondary-container": "#5f6365",
+                      "on-secondary-fixed": "#181c1e",
+                      "surface-bright": "#f5faff",
+                      "outline-variant": "#c6c6cc",
+                      "on-surface": "#171c20"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "16px",
+                      "panel-gap": "20px",
+                      "container-margin": "24px",
+                      "base": "4px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Geist"],
+                      "body-lg": ["Geist"],
+                      "headline-lg-mobile": ["Geist"],
+                      "headline-sm": ["Geist"],
+                      "label-sm": ["Geist"],
+                      "body-md": ["Geist"],
+                      "label-md": ["Geist"],
+                      "headline-lg": ["Geist"],
+                      "display-metrics": ["Geist"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "headline-sm": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                      "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "display-metrics": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        body { font-family: 'Geist', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex bg-primary dark:bg-primary text-on-primary font-label-md text-label-md fixed left-0 top-0 h-screen w-[240px] bg-primary flex-col h-full py-container-margin z-20">
+<div class="px-container-margin mb-8">
+<h1 class="font-headline-md text-headline-md font-bold text-on-primary">QualityNews</h1>
+<p class="font-label-sm text-label-sm text-on-primary opacity-80 mt-1">AI News CMS</p>
+</div>
+<div class="px-4 mb-8">
+<button class="w-full bg-surface text-primary font-label-md text-label-md py-3 px-4 rounded-lg flex items-center justify-center gap-2 hover:bg-surface-container-low transition-colors duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+                New Entry
+            </button>
+</div>
+<ul class="flex flex-col gap-2 w-full">
+<li>
+<a class="flex items-center gap-3 py-3 w-full text-on-primary-container opacity-80 pl-4 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 py-3 w-full text-on-primary font-bold border-l-4 border-on-tertiary-container pl-3 transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+                    Articles
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 py-3 w-full text-on-primary-container opacity-80 pl-4 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">post_add</span>
+                    Submit News
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 py-3 w-full text-on-primary-container opacity-80 pl-4 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">layers</span>
+                    Pages
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 py-3 w-full text-on-primary-container opacity-80 pl-4 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">auto_awesome</span>
+                    Editorial Tools
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 py-3 w-full text-on-primary-container opacity-80 pl-4 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">group</span>
+                    User Management
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 ml-0 md:ml-[240px] flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface font-label-md text-label-md docked full-width top-0 border-b border-outline-variant flat no shadows flex justify-between items-center h-16 px-gutter w-full sticky z-10">
+<div class="flex items-center gap-6">
+<!-- Mobile Menu Button (visible only on md:hidden) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="hidden md:flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors py-5 border-b-2 border-transparent" href="#">Dashboard</a>
+<a class="text-primary font-bold border-b-2 border-primary py-5" href="#">Editorial</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="bg-surface-container-low border border-outline-variant rounded-full py-1.5 pl-10 pr-4 text-body-md focus:outline-none focus:border-primary transition-colors w-64" placeholder="Search..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors scale-95 active:scale-90 p-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors scale-95 active:scale-90 p-1 rounded-full overflow-hidden w-8 h-8 flex items-center justify-center bg-surface-container-highest">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Page Content -->
+<main class="flex-1 p-gutter md:p-container-margin overflow-y-auto">
+<!-- Page Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-background mb-2">My Articles</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage your submitted and draft stories.</p>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md py-2 px-6 rounded-lg flex items-center justify-center gap-2 hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm self-start md:self-auto whitespace-nowrap">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">add</span>
+                    Create Article
+                </button>
+</div>
+<!-- Filters Bar -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-4 mb-6 flex flex-col md:flex-row gap-4 justify-between items-center">
+<div class="w-full md:w-auto flex-1 max-w-md relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline" style="font-variation-settings: 'FILL' 0;">search</span>
+<input class="w-full bg-surface border border-outline-variant rounded-lg py-2 pl-10 pr-4 text-body-md focus:outline-none focus:border-primary transition-colors" placeholder="Search articles..." type="text"/>
+</div>
+<div class="flex flex-wrap gap-4 w-full md:w-auto">
+<select class="bg-surface border border-outline-variant rounded-lg py-2 pl-4 pr-10 text-body-md focus:outline-none focus:border-primary appearance-none cursor-pointer">
+<option value="">All Statuses</option>
+<option value="draft">Draft</option>
+<option value="review">Under Review</option>
+<option value="published">Published</option>
+<option value="needs_work">Needs Work</option>
+</select>
+<select class="bg-surface border border-outline-variant rounded-lg py-2 pl-4 pr-10 text-body-md focus:outline-none focus:border-primary appearance-none cursor-pointer">
+<option value="">All Categories</option>
+<option value="tech">Technology</option>
+<option value="politics">Politics</option>
+<option value="business">Business</option>
+<option value="science">Science</option>
+</select>
+</div>
+</div>
+<!-- Data Table -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden shadow-sm mb-6">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant font-label-sm text-label-sm text-on-surface-variant uppercase">
+<th class="py-4 px-6 font-semibold">Article</th>
+<th class="py-4 px-6 font-semibold">Category</th>
+<th class="py-4 px-6 font-semibold">Status</th>
+<th class="py-4 px-6 font-semibold">Last Updated</th>
+<th class="py-4 px-6 font-semibold text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="font-body-md text-body-md text-on-background">
+<!-- Row 1 -->
+<tr class="border-b border-outline-variant hover:bg-surface transition-colors group">
+<td class="py-4 px-6">
+<div class="font-medium mb-1">The Future of AI in Newsrooms</div>
+<div class="text-sm text-on-surface-variant line-clamp-1">Exploring how automated tools are reshaping editorial workflows.</div>
+</td>
+<td class="py-4 px-6">Technology</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-surface-container-highest text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                                        Draft
+                                    </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">2 hours ago</td>
+<td class="py-4 px-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="Edit">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-error rounded-md hover:bg-error-container transition-colors" title="Delete">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b border-outline-variant hover:bg-surface transition-colors group">
+<td class="py-4 px-6">
+<div class="font-medium mb-1">Global Markets React to Policy Shift</div>
+<div class="text-sm text-on-surface-variant line-clamp-1">In-depth analysis of the recent central bank announcements.</div>
+</td>
+<td class="py-4 px-6">Business</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-tertiary-fixed text-on-tertiary-fixed">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                                        Under Review
+                                    </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Yesterday, 14:30</td>
+<td class="py-4 px-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="View">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">visibility</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-outline-variant hover:bg-surface transition-colors group">
+<td class="py-4 px-6">
+<div class="font-medium mb-1">Breakthrough in Quantum Computing</div>
+<div class="text-sm text-on-surface-variant line-clamp-1">Researchers achieve new milestone in qubit stability.</div>
+</td>
+<td class="py-4 px-6">Science</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium border border-primary text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+                                        Published
+                                    </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Oct 12, 2023</td>
+<td class="py-4 px-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="Analytics">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">bar_chart</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="View">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">open_in_new</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface transition-colors group">
+<td class="py-4 px-6">
+<div class="font-medium mb-1 flex items-center gap-2">
+                                        City Council Debates Zoning Laws
+                                        <span class="material-symbols-outlined text-error text-xs" style="font-variation-settings: 'FILL' 1;" title="Revisions Requested">error</span>
+</div>
+<div class="text-sm text-on-surface-variant line-clamp-1">Local impact of proposed changes to downtown commercial zones.</div>
+</td>
+<td class="py-4 px-6">Politics</td>
+<td class="py-4 px-6">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-error-container text-on-error-container">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                                        Needs Work
+                                    </span>
+</td>
+<td class="py-4 px-6 text-on-surface-variant">Oct 10, 2023</td>
+<td class="py-4 px-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="Edit">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">edit</span>
+</button>
+<button class="p-1.5 text-on-surface-variant hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="View Comments">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">forum</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between border-t border-outline-variant pt-4 font-label-md text-label-md">
+<div class="text-on-surface-variant">
+                    Showing <span class="font-medium text-on-background">1</span> to <span class="font-medium text-on-background">4</span> of <span class="font-medium text-on-background">12</span> results
+                </div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 border border-outline-variant rounded-md text-on-surface-variant hover:bg-surface-container-low disabled:opacity-50 disabled:cursor-not-allowed transition-colors" disabled="">Previous</button>
+<div class="flex gap-1 hidden sm:flex">
+<button class="w-8 h-8 flex items-center justify-center rounded-md bg-primary text-on-primary font-medium">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-surface-container-low transition-colors">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-md text-on-surface-variant hover:bg-surface-container-low transition-colors">3</button>
+</div>
+<button class="px-3 py-1.5 border border-outline-variant rounded-md text-on-surface-variant hover:bg-surface-container-low transition-colors">Next</button>
+</div>
+</div>
+</main>
+</div>
+</body></html>

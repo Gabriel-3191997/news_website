@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Editor Article Review - QualityNews AI CMS</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#f5faff",
+                        "on-tertiary-container": "#4f8ad0",
+                        "surface": "#f5faff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed": "#d3e4ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#000918",
+                        "outline": "#76777c",
+                        "surface-tint": "#585e6c",
+                        "on-background": "#171c20",
+                        "primary-container": "#1a202c",
+                        "tertiary-fixed-dim": "#a2c9ff",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#dee3e8",
+                        "surface-container-highest": "#dee3e8",
+                        "on-primary-fixed": "#161c27",
+                        "inverse-primary": "#c1c6d7",
+                        "tertiary-container": "#002140",
+                        "error": "#ba1a1a",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#c1c6d7",
+                        "surface-container": "#e9eef3",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed-variant": "#434749",
+                        "primary-fixed": "#dde2f3",
+                        "surface-dim": "#d5dbdf",
+                        "on-surface-variant": "#45474c",
+                        "on-tertiary-fixed": "#001c38",
+                        "inverse-surface": "#2c3135",
+                        "secondary-fixed": "#e0e3e5",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#e4e9ee",
+                        "surface-container-low": "#eff4f9",
+                        "secondary-fixed-dim": "#c3c7c9",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#828796",
+                        "primary": "#030813",
+                        "inverse-on-surface": "#ecf1f6",
+                        "secondary": "#5b5f61",
+                        "on-primary-fixed-variant": "#414754",
+                        "on-tertiary-fixed-variant": "#004881",
+                        "secondary-container": "#dde0e2",
+                        "on-secondary-container": "#5f6365",
+                        "on-secondary-fixed": "#181c1e",
+                        "surface-bright": "#f5faff",
+                        "outline-variant": "#c6c6cc",
+                        "on-surface": "#171c20"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "panel-gap": "20px",
+                        "container-margin": "24px",
+                        "base": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Geist"],
+                        "body-lg": ["Geist"],
+                        "headline-lg-mobile": ["Geist"],
+                        "headline-sm": ["Geist"],
+                        "label-sm": ["Geist"],
+                        "body-md": ["Geist"],
+                        "label-md": ["Geist"],
+                        "headline-lg": ["Geist"],
+                        "display-metrics": ["Geist"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "display-metrics": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Geist', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex antialiased">
+<!-- SideNavBar (Role-aware navigation) -->
+<nav class="bg-primary dark:bg-primary fixed left-0 top-0 h-screen w-[240px] flex flex-col py-container-margin z-50">
+<div class="px-container-margin mb-8 flex flex-col gap-2">
+<h1 class="font-headline-md text-headline-md font-bold text-on-primary">QualityNews</h1>
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-wider">AI News CMS</span>
+</div>
+<div class="flex-1 overflow-y-auto w-full">
+<ul class="flex flex-col gap-2 w-full">
+<!-- Inactive -->
+<li class="w-full">
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container opacity-80 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-md text-label-md">Dashboard</span>
+</a>
+</li>
+<!-- Active: Editor reviewing an article matches "Articles" closest -->
+<li class="w-full">
+<a class="flex items-center gap-3 py-3 text-on-primary font-bold border-l-4 border-on-tertiary-container pl-3 transition-colors duration-200 bg-primary-container" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+<span class="font-label-md text-label-md">Articles</span>
+</a>
+</li>
+<!-- Inactive -->
+<li class="w-full">
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container opacity-80 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="post_add">post_add</span>
+<span class="font-label-md text-label-md">Submit News</span>
+</a>
+</li>
+<li class="w-full">
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container opacity-80 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="layers">layers</span>
+<span class="font-label-md text-label-md">Pages</span>
+</a>
+</li>
+<li class="w-full">
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container opacity-80 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-md text-label-md">Editorial Tools</span>
+</a>
+</li>
+<li class="w-full">
+<a class="flex items-center gap-3 px-4 py-3 text-on-primary-container opacity-80 hover:bg-primary-container hover:text-on-primary-container transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-label-md text-label-md">User Management</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="px-container-margin mt-auto">
+<button class="w-full bg-on-tertiary-container text-on-primary font-label-md text-label-md py-3 rounded-lg hover:bg-tertiary-fixed-dim transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                New Entry
+            </button>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<div class="flex-1 flex flex-col ml-[240px] w-[calc(100%-240px)] min-h-screen relative">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface docked full-width top-0 border-b border-outline-variant flex justify-between items-center h-16 px-gutter w-full sticky z-40">
+<div class="flex items-center gap-8">
+<h2 class="font-headline-sm text-headline-sm font-black text-primary">QualityNews</h2>
+<nav class="hidden md:flex gap-6">
+<a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors py-5" href="#">Dashboard</a>
+<a class="text-primary font-label-md text-label-md font-bold border-b-2 border-primary pb-[18px] pt-5 hover:text-primary transition-colors" href="#">Editorial</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-1.5 rounded-full border border-outline-variant bg-surface-container-lowest text-label-md font-label-md focus:border-on-tertiary-container focus:ring-1 focus:ring-on-tertiary-container outline-none transition-all w-48" placeholder="Search..." type="text"/>
+</div>
+<button class="text-on-surface-variant hover:text-primary transition-colors scale-95 active:scale-90 p-2">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors scale-95 active:scale-90 p-2">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Editor & AI Assistant Workspace -->
+<main class="flex-1 flex w-full relative">
+<!-- Left Column: Rich Text Editor Canvas -->
+<div class="flex-1 flex flex-col max-w-[800px] mx-auto px-container-margin py-8 pb-32">
+<!-- Meta Info -->
+<div class="flex items-center gap-4 mb-6 text-label-sm font-label-sm text-on-surface-variant uppercase tracking-wide">
+<span class="flex items-center gap-1 text-on-tertiary-container bg-tertiary-fixed px-2 py-1 rounded-sm"><span class="material-symbols-outlined text-[16px]">pending_actions</span> IN REVIEW</span>
+<span>By: Sarah Jenkins</span>
+<span>•</span>
+<span>Last edited 10 mins ago</span>
+</div>
+<!-- Editor Title -->
+<input class="w-full bg-transparent border-none font-headline-lg text-headline-lg text-on-surface placeholder-outline-variant focus:ring-0 p-0 mb-6 font-bold" placeholder="Article Headline..." type="text" value="Liberia's New Digital Education Initiative: A Leap Forward or a Logistical Nightmare?"/>
+<!-- Distraction-free Toolbar -->
+<div class="sticky top-16 z-30 bg-surface/90 backdrop-blur-sm py-2 mb-6 border-b border-outline-variant flex items-center gap-2">
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant"><span class="material-symbols-outlined">format_bold</span></button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant"><span class="material-symbols-outlined">format_italic</span></button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant"><span class="material-symbols-outlined">format_h1</span></button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant"><span class="material-symbols-outlined">format_h2</span></button>
+<div class="w-px h-6 bg-outline-variant mx-2"></div>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant"><span class="material-symbols-outlined">format_list_bulleted</span></button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant"><span class="material-symbols-outlined">format_quote</span></button>
+<button class="p-1.5 hover:bg-surface-container rounded text-on-surface-variant"><span class="material-symbols-outlined">link</span></button>
+</div>
+<!-- Editor Content -->
+<div class="prose prose-lg max-w-none font-body-lg text-body-lg text-on-surface space-y-6 outline-none" contenteditable="true">
+<p>In a sweeping announcement yesterday, the government outlined a massive $50m program aimed at overhauling the national digital infrastructure for primary schools. Proponents argue this is the overdue modernization the sector desperately needs.</p>
+<p>However, critics were quick to pounce on the <span class="bg-error-container/40 border-b-2 border-error cursor-pointer">draconian and short-sighted</span> timeline proposed by the Ministry of Education. The roll-out is expected to commence in rural areas where basic electricity remains erratic.</p>
+<p>According to preliminary reports, several key contractors have already been selected without a public bidding process, raising alarms among transparency watchdogs.</p>
+<h3>Sources</h3>
+<ul class="list-disc pl-6 space-y-2 text-body-md text-on-surface-variant mt-4">
+<li>Ministry of Education Press Release (Oct 24)</li>
+<li>Interview with Transparency International local chapter</li>
+</ul>
+</div>
+</div>
+<!-- Right Column: NavigationDrawer (AI Assistant) -->
+<!-- Note: Positioned absolute/fixed relative to main content area per typical drawer patterns, but since it's a 2-col layout requested, we dock it to the right -->
+<aside class="bg-surface-container-low dark:bg-surface-container-low w-[320px] h-[calc(100vh-64px)] sticky top-16 border-l border-outline-variant shadow-sm flex flex-col p-panel-gap">
+<!-- Header -->
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">smart_toy</span>
+</div>
+<div>
+<h3 class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant">AI Assistant</h3>
+<p class="font-body-md text-body-md text-on-tertiary-container">Contextual Insights</p>
+</div>
+</div>
+<!-- Tabs -->
+<div class="flex bg-surface-container-highest rounded-lg p-1 mb-6">
+<button class="flex-1 py-1.5 px-2 bg-tertiary-container text-on-tertiary-container rounded-lg font-label-sm text-label-sm flex items-center justify-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[16px]" data-icon="fact_check">fact_check</span> Claims
+                    </button>
+<button class="flex-1 py-1.5 px-2 text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 hover:bg-surface-container-high rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="psychology">psychology</span> Bias
+                    </button>
+<button class="flex-1 py-1.5 px-2 text-on-surface-variant font-label-sm text-label-sm flex items-center justify-center gap-1 hover:bg-surface-container-high rounded-lg transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="edit_note">edit_note</span> Style
+                    </button>
+</div>
+<!-- Content Area (Claims Tab Active) -->
+<div class="flex-1 overflow-y-auto space-y-6 pr-2">
+<!-- Verification Score -->
+<div class="bg-surface-container-lowest rounded-xl p-4 border border-outline-variant">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-md text-label-md text-on-surface">Overall Verification</span>
+<span class="font-headline-sm text-headline-sm text-on-tertiary-container">78%</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2">
+<div class="bg-on-tertiary-container h-2 rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<!-- Individual Claim Check -->
+<div class="bg-surface-container-lowest rounded-xl p-4 border border-outline-variant relative overflow-hidden group">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-outline-variant group-hover:bg-on-tertiary-container transition-colors"></div>
+<div class="flex items-start gap-2 mb-2">
+<span class="material-symbols-outlined text-outline-variant text-[18px] mt-0.5">format_quote</span>
+<p class="font-body-md text-body-md text-on-surface italic text-sm">"Gov announced $50m program"</p>
+</div>
+<div class="flex flex-col gap-2 mt-3 pt-3 border-t border-outline-variant border-dashed">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">warning</span> Needs Verification</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Conf: 72%</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm leading-tight">Public records indicate a budget proposal, but final approval of the $50m figure is not yet confirmed by the treasury.</p>
+<div class="flex gap-2 mt-2">
+<button class="px-3 py-1 bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm rounded-md transition-colors border border-outline-variant">Review Source</button>
+</div>
+</div>
+</div>
+<!-- Bias Detection Hint (to show multi-modal AI capability) -->
+<div class="bg-error-container/20 rounded-xl p-4 border border-error/30 relative">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-error text-[18px]">psychology</span>
+<span class="font-label-sm text-label-sm text-error font-bold">Loaded Language Detected</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface text-sm">Phrase <span class="bg-error-container/40 px-1 rounded">"draconian and short-sighted"</span> introduces strong editorial bias in a standard report.</p>
+</div>
+</div>
+</aside>
+</main>
+<!-- Sticky Action Bar -->
+<div class="fixed bottom-0 left-[240px] right-[320px] bg-surface-container-lowest border-t border-outline-variant p-4 flex items-center justify-between shadow-[0_-4px_12px_rgba(0,0,0,0.05)] z-40">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Word Count: 642</span>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-6 py-2 rounded-lg font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors border border-outline-variant">Request Changes</button>
+<button class="px-6 py-2 rounded-lg font-label-md text-label-md text-error hover:bg-error-container transition-colors border border-error/30">Reject</button>
+<button class="px-6 py-2 rounded-lg font-label-md text-label-md bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">send</span> Approve &amp; Publish
+                </button>
+</div>
+</div>
+</div>
+</body></html>
