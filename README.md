@@ -1,6 +1,14 @@
 # News_Website
 An AI News Site for credible reporting and analysis
 
+
+### Extensions
+
+* Google Analytics
+* Google Tag Manager
+* HypeLab - Ads
+
+
 ## Local Development
 
 Requirements
