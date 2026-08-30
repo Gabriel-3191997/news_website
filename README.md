@@ -7,6 +7,15 @@ An AI-powered news platform built to deliver fast, honest, and reliable news.
 * Reporters get smart AI tools to write initial drafts.
 * Editors using AI to verify sources before gets published.
 
+
+### Audience
+
+* Reader:
+  
+* Reporter:
+  
+* Editor:
+
 ### Extensions
 
 * Google Analytics
