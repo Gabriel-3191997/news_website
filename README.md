@@ -1,6 +1,9 @@
-# News_Website
-An AI News Site for credible reporting and analysis
+An AI-powered news platform built to deliver fast, honest, and reliable news.
 
+
+* Readers get accurate stories.
+* Reporters get smart AI tools to write initial drafts.
+* Editors using AI to verify sources before gets published.
 
 ### Extensions
 
