@@ -10,11 +10,11 @@ An AI-powered news platform built to deliver fast, honest, and reliable news.
 
 ### Audience
 
-* Reader:
+* Reader: get the full picture without bias
   
-* Reporter:
+* Reporter: format drafts automatically
   
-* Editor:
+* Editor: flag unverified claims before publishing
 
 ### Extensions
 
